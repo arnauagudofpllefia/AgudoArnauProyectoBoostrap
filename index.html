@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boostrap</title>
+    <title>Fitness Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    
+    <header class="encabezado-principal">
+        <nav class="navbar" aria-label="Navegacion principal">
+            <div class="container-fluid px-4 pt-3 align-items-center">
+                <a class="navbar-brand marca-navbar m-0" href="#" aria-label="Fitness online inicio">
+                    <span aria-hidden="true">x</span>
+                    <span class="marca-secundaria"> fitness </span><span class="marca-destacada">online</span>
+                </a>
+                <button class="navbar-toggler boton-menu" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon icono-menu" aria-hidden="true">&#9776;</span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ms-auto text-end mt-3">
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Pricing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container-fluid px-4 pb-4">
+            <h1 class="titulo-hero">Online Workout<br>Personal<br>Program</h1>
+            <p class="subtitulo-hero">Start training online with your personal coach and become healthy</p>
+            <button type="button" class="btn boton-hero">Start Training</button>
+        </section>
+    </header>
+
+    <img
+        src="https://images.unsplash.com/photo-1517344368193-41552b6ad3f5?auto=format&fit=crop&w=800&q=80"
+        class="imagen-hero"
+        alt="Piernas de un atleta levantando una barra en el gimnasio"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,96 @@
+:root {
+    --morado-principal: #6c37c6;
+    --verde-azulado: #19c9c3;
+    --texto-claro: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.encabezado-principal {
+    background-color: var(--morado-principal);
+    color: var(--texto-claro);
+}
+
+.marca-navbar {
+    color: var(--texto-claro);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    font-size: 1.6rem;
+}
+
+.marca-navbar:focus,
+.marca-navbar:hover {
+    color: var(--texto-claro);
+}
+
+.marca-secundaria {
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+.marca-destacada {
+    font-weight: 700;
+}
+
+.boton-menu {
+    border: 0;
+    padding: 0.25rem;
+    box-shadow: none;
+}
+
+.boton-menu:focus-visible,
+.btn:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+.icono-menu {
+    background-image: none;
+    width: auto;
+    height: auto;
+    color: #ffffff;
+    font-size: 1.9rem;
+    line-height: 1;
+}
+
+.titulo-hero {
+    font-size: 3rem;
+    line-height: 1.15;
+    font-weight: 700;
+    margin: 1.1rem 0 1rem;
+    text-align: center;
+}
+
+.subtitulo-hero {
+    font-size: 2.05rem;
+    line-height: 1.3;
+    margin: 0;
+    text-align: center;
+}
+
+.boton-hero {
+    background-color: var(--verde-azulado);
+    border: 0;
+    border-radius: 999px;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0.95rem 1.8rem;
+    margin: 1.45rem auto -2.2rem;
+    display: block;
+    width: min(85%, 360px);
+    position: relative;
+    z-index: 2;
+}
+
+.imagen-hero {
+    width: 100%;
+    height: 335px;
+    object-fit: cover;
+    display: block;
+}
