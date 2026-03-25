@@ -4,42 +4,377 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header class="encabezado-principal">
-        <nav class="navbar" aria-label="Navegacion principal">
-            <div class="container-fluid px-4 pt-3 align-items-center">
-                <a class="navbar-brand marca-navbar m-0" href="#" aria-label="Fitness online inicio">
-                    <span aria-hidden="true">x</span>
-                    <span class="marca-secundaria"> fitness </span><span class="marca-destacada">online</span>
+    <header id="inicio" class="bloque-morado">
+        <nav class="navbar navbar-expand-lg" aria-label="Navegacion principal">
+            <div class="container py-2">
+                <a class="navbar-brand marca-navbar" href="#inicio" aria-label="Inicio Fitness Online">
+                    <span class="icono-marca" aria-hidden="true">✖</span>
+                    <span class="marca-secundaria">fitness </span><span class="marca-destacada">online</span>
                 </a>
-                <button class="navbar-toggler boton-menu" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Abrir menu">
-                    <span class="navbar-toggler-icon icono-menu" aria-hidden="true">&#9776;</span>
+                <button class="navbar-toggler boton-menu" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu principal">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="mainMenu">
-                    <ul class="navbar-nav ms-auto text-end mt-3">
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Pricing</a></li>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto mt-3 mt-lg-0 gap-lg-2">
+                        <li class="nav-item"><a class="nav-link enlace-menu" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link enlace-menu" href="#pasos">How To Start</a></li>
+                        <li class="nav-item"><a class="nav-link enlace-menu" href="#caracteristicas">Features</a></li>
+                        <li class="nav-item"><a class="nav-link enlace-menu" href="#precios">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link enlace-menu" href="#faq">FAQ</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <section class="container-fluid px-4 pb-4">
-            <h1 class="titulo-hero">Online Workout<br>Personal<br>Program</h1>
-            <p class="subtitulo-hero">Start training online with your personal coach and become healthy</p>
-            <button type="button" class="btn boton-hero">Start Training</button>
+        <section class="seccion-hero pb-4" aria-labelledby="titulo-hero">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8 col-xl-6 text-center">
+                        <h1 id="titulo-hero" class="titulo-hero">Online Workout<br>Personal<br>Program</h1>
+                        <p class="subtitulo-hero">Start training online with your personal coach and become healthy</p>
+                        <a href="#entrena" class="btn boton-principal boton-hero-superpuesto mt-3">Start Training</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </header>
 
-    <img
-        src="https://images.unsplash.com/photo-1517344368193-41552b6ad3f5?auto=format&fit=crop&w=800&q=80"
-        class="imagen-hero"
-        alt="Piernas de un atleta levantando una barra en el gimnasio"
-    >
+    <section class="bloque-imagen-hero" aria-label="Imagen principal">
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <div class="col-12">
+                    <img src="img/imagenPrincipal.jpg" class="imagen-hero-principal" alt="Atleta entrenando con una barra en el gimnasio">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="about" class="bloque-claro py-5" aria-labelledby="titulo-about">
+            <div class="container">
+                <div class="row justify-content-center g-4">
+                    <div class="col-12">
+                        <h2 id="titulo-about" class="titulo-seccion titulo-about text-center">About Us</h2>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <article class="bloque-imagen-about">
+                            <img src="img/imagenAbout.jpg" class="imagen-about" alt="Atleta atandose las zapatillas antes de entrenar">
+                            <span class="icono-reproducir" aria-hidden="true">&#9658;</span>
+                        </article>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <article class="bloque-imagen-about">
+                            <img src="img/imagenAbout.jpg" class="imagen-about" alt="Deportista preparandose para una sesion al aire libre">
+                            <span class="icono-reproducir" aria-hidden="true">&#9658;</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pasos" class="bloque-morado py-5" aria-labelledby="titulo-pasos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 id="titulo-pasos" class="titulo-seccion text-white text-center">How To Start</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-2">
+                    <div class="col-12 col-xl-10 text-center">
+                        <p class="texto-intro-pasos">It’s easy to start training right now without going anywhere, just in your room, having without missing important things and coach advices</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center g-3 mt-3">
+                    <div class="col-12 col-xl-10">
+                        <article class="paso-item">
+                            <div class="row g-2 g-md-3 align-items-start">
+                                <div class="col-2 col-sm-2">
+                                    <p class="numero-paso">1</p>
+                                </div>
+                                <div class="col-10 col-sm-10">
+                                    <p class="texto-paso mb-0">Sign up in Fitness Online with your phone number. No spam guaranteed. You can skip using Fitness Online at any moment</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-xl-10">
+                        <article class="paso-item">
+                            <div class="row g-2 g-md-3 align-items-start">
+                                <div class="col-2 col-sm-2">
+                                    <p class="numero-paso">2</p>
+                                </div>
+                                <div class="col-10 col-sm-10">
+                                    <p class="texto-paso mb-0">We will immeadiately add you in our chat bot, where you will be able to pay chosen pricing plan</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-xl-10">
+                        <article class="paso-item">
+                            <div class="row g-2 g-md-3 align-items-start">
+                                <div class="col-2 col-sm-2">
+                                    <p class="numero-paso">3</p>
+                                </div>
+                                <div class="col-10 col-sm-10">
+                                    <p class="texto-paso mb-0">In 24 hours after payment your trainer will contact you to get acquainted and to make training program best for you</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="caracteristicas" class="bloque-claro py-5" aria-labelledby="titulo-caracteristicas">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 id="titulo-caracteristicas" class="titulo-seccion text-center">Features</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center g-4 mt-1">
+                    <div class="col-12 col-xl-10">
+                        <article class="fila-feature">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-3 col-sm-2">
+                                    <span class="icono-feature">
+                                        <img src="img/iconoFeature1.png" class="imagen-icono-feature" alt="Icono de lugar comodo para entrenar">
+                                    </span>
+                                </div>
+                                <div class="col-9 col-sm-10">
+                                    <h3 class="titulo-feature">Comfortable Place</h3>
+                                    <p class="texto-feature mb-0">Train where it is convenient for you. You don't need to go to gym anymore</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-xl-10">
+                        <article class="fila-feature">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-3 col-sm-2">
+                                    <span class="icono-feature">
+                                        <img src="img/iconoFeature2.png" class="imagen-icono-feature" alt="Icono de entrenadores profesionales">
+                                    </span>
+                                </div>
+                                <div class="col-9 col-sm-10">
+                                    <h3 class="titulo-feature">Professional Trainers</h3>
+                                    <p class="texto-feature mb-0">Train where it is convenient for you. You don't need to go to gym anymore</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-xl-10">
+                        <article class="fila-feature">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-3 col-sm-2">
+                                    <span class="icono-feature">
+                                        <img src="img/iconoFeature3.png" class="imagen-icono-feature" alt="Icono de enfoque individual">
+                                    </span>
+                                </div>
+                                <div class="col-9 col-sm-10">
+                                    <h3 class="titulo-feature">Individual Approach</h3>
+                                    <p class="texto-feature mb-0">You will have a training program that fits exactly you</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 text-center">
+                        <a href="#entrena" class="btn boton-principal">Start Training</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="precios" class="bloque-morado py-5" aria-labelledby="titulo-precios">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 id="titulo-precios" class="titulo-seccion text-white text-center">Pricing</h2>
+                    </div>
+                </div>
+                <div class="row g-4 mt-1">
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="card h-100 tarjeta-precio">
+                            <div class="card-body text-center">
+                                <h3 class="h4">Basic</h3>
+                                <p class="precio-plan">$19/mo</p>
+                                <p>3 routines per week and community access.</p>
+                                <button type="button" class="btn boton-principal">Choose</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="card h-100 tarjeta-precio tarjeta-precio-destacada">
+                            <div class="card-body text-center">
+                                <h3 class="h4">Pro</h3>
+                                <p class="precio-plan">$39/mo</p>
+                                <p>Unlimited classes, personal coach and nutrition tips.</p>
+                                <button type="button" class="btn boton-principal">Choose</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="card h-100 tarjeta-precio">
+                            <div class="card-body text-center">
+                                <h3 class="h4">Elite</h3>
+                                <p class="precio-plan">$59/mo</p>
+                                <p>1:1 sessions, premium recovery plan and full analytics.</p>
+                                <button type="button" class="btn boton-principal">Choose</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="opiniones" class="bloque-claro py-5" aria-labelledby="titulo-opiniones">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 id="titulo-opiniones" class="titulo-seccion text-center">Feedback</h2>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 col-xl-10 mx-auto">
+                        <div id="carruselFeedback" class="carousel slide" data-bs-ride="carousel" aria-label="Testimonios de clientes">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <article class="card tarjeta-feedback text-center p-4">
+                                        <p class="mb-3">"In three months I improved my strength and finally built a routine I can keep."</p>
+                                        <h3 class="h6 mb-0">Laura M.</h3>
+                                    </article>
+                                </div>
+                                <div class="carousel-item">
+                                    <article class="card tarjeta-feedback text-center p-4">
+                                        <p class="mb-3">"The coach follows up every week. It feels personalized and motivating."</p>
+                                        <h3 class="h6 mb-0">Carlos P.</h3>
+                                    </article>
+                                </div>
+                                <div class="carousel-item">
+                                    <article class="card tarjeta-feedback text-center p-4">
+                                        <p class="mb-3">"The classes are dynamic and the app makes it very easy to track progress."</p>
+                                        <h3 class="h6 mb-0">Andrea R.</h3>
+                                    </article>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carruselFeedback" data-bs-slide="prev" aria-label="Testimonio anterior">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carruselFeedback" data-bs-slide="next" aria-label="Siguiente testimonio">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="bloque-morado py-5" aria-labelledby="titulo-faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 id="titulo-faq" class="titulo-seccion text-white text-center">FAQ</h2>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 col-xl-8 mx-auto">
+                        <div class="accordion" id="acordeonFaq">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqUno" aria-expanded="true" aria-controls="faqUno">Do I need gym equipment?</button>
+                                </h3>
+                                <div id="faqUno" class="accordion-collapse collapse show" data-bs-parent="#acordeonFaq">
+                                    <div class="accordion-body">No. You can choose home, gym or hybrid routines according to your setup.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqDos" aria-expanded="false" aria-controls="faqDos">Can I cancel anytime?</button>
+                                </h3>
+                                <div id="faqDos" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                                    <div class="accordion-body">Yes, subscriptions can be canceled anytime from your account panel.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTres" aria-expanded="false" aria-controls="faqTres">How long are the workouts?</button>
+                                </h3>
+                                <div id="faqTres" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                                    <div class="accordion-body">Most sessions last 30 to 50 minutes, depending on your selected plan.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="entrena" class="bloque-claro py-5" aria-labelledby="titulo-formulario">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-xl-8">
+                        <h2 id="titulo-formulario" class="titulo-seccion text-center">Start Training</h2>
+                        <form class="tarjeta-formulario p-4 p-md-5 mt-3" action="#" method="post">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label for="nombre" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="objetivo" class="form-label">Goal</label>
+                                    <select class="form-select" id="objetivo" name="objetivo" required>
+                                        <option value="" selected disabled>Select one option</option>
+                                        <option value="fuerza">Build strength</option>
+                                        <option value="perdida">Lose fat</option>
+                                        <option value="movilidad">Improve mobility</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="horario" class="form-label">Training time</label>
+                                    <input type="text" class="form-control" id="horario" name="horario" placeholder="Morning / Afternoon / Evening" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="mensaje" class="form-label">Message</label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Tell us your current level"></textarea>
+                                </div>
+                                <div class="col-12 text-center mt-2">
+                                    <button type="submit" class="btn boton-principal">Send Request</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bloque-morado py-4" aria-label="Pie de pagina">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <p class="m-0 texto-footer">© 2026 Fitness Online</p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <a class="enlace-footer" href="#">Privacy</a>
+                    <a class="enlace-footer ms-3" href="#">Terms</a>
+                    <a class="enlace-footer ms-3" href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
