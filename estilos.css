@@ -638,8 +638,16 @@ body {
 
 .ayuda-campo {
     font-size: 0.95rem;
-    color: #4f535b;
+    color: #3f444c;
     margin: 0.35rem 0 0;
+}
+
+.campo-entrena:invalid {
+    border-color: #8e1a30;
+}
+
+.campo-entrena:focus:invalid {
+    box-shadow: 0 0 0 3px rgba(142, 26, 48, 0.2);
 }
 
 .error-campo {
@@ -730,6 +738,25 @@ body {
 
 .footer-simple .container {
     max-width: 640px;
+}
+
+.nav-secundaria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+    margin: 0.2rem 0 0.55rem;
+}
+
+.nav-secundaria a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-size: 0.98rem;
+}
+
+.nav-secundaria a:hover,
+.nav-secundaria a:focus-visible {
+    color: #ffffff;
 }
 
 .enlace-terminos {
@@ -827,6 +854,11 @@ textarea:focus-visible,
     .footer-simple .enlace-terminos {
         margin-bottom: 0;
         font-size: 1.1rem;
+    }
+
+    .footer-simple .nav-secundaria {
+        margin: 0;
+        order: 2;
     }
 
     .footer-simple .texto-copyright {
