@@ -702,7 +702,7 @@ body {
 
 .boton-entrena {
     background: #12bbb7;
-    color: #ffffff;
+    color: #1a1a1a;
     border: 0;
     border-radius: 999px;
     font-weight: 700;
@@ -714,13 +714,13 @@ body {
 .boton-entrena:hover,
 .boton-entrena:focus {
     background: #10aaa5;
-    color: #ffffff;
+    color: #1a1a1a;
 }
 
 .boton-principal {
     background-color: var(--verde-azulado);
     border: 0;
-    color: #ffffff;
+    color: #1a1a1a;
     font-weight: 700;
     border-radius: 999px;
     padding: 0.75rem 1.7rem;
@@ -729,7 +729,7 @@ body {
 .boton-principal:hover,
 .boton-principal:focus {
     background-color: #18b2a9;
-    color: #ffffff;
+    color: #1a1a1a;
 }
 
 .footer-simple {
