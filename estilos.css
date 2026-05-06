@@ -45,6 +45,16 @@ body {
     color: var(--texto-claro);
 }
 
+.marca-navbar:focus {
+    outline: none;
+}
+
+.marca-navbar:focus-visible {
+    outline: 3px solid var(--texto-claro);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
 .marca-secundaria {
     font-weight: 500;
 }
@@ -686,6 +696,19 @@ body {
     font-weight: 400;
 }
 
+.logo-accesibilidad {
+    display: block;
+    width: 80px;
+    height: auto;
+    margin-top: 0.75rem;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.logo-accesibilidad:hover {
+    opacity: 1;
+}
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -734,6 +757,11 @@ textarea:focus-visible,
     .footer-simple .texto-copyright {
         margin: 0;
         font-size: 1.65rem;
+    }
+
+    .footer-simple .logo-accesibilidad {
+        width: 60px;
+        margin-top: 0;
     }
 
     #entrena .container {
