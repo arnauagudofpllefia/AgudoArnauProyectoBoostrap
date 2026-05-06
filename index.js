@@ -1,26 +1,43 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const boton = document.querySelector('.boton-menu');
-    const menu = document.getElementById('menuPrincipal');
+    const botonMenu = document.querySelector('.boton-menu');
+    const menuPrincipal = document.getElementById('menuPrincipal');
 
-    boton.addEventListener('click', function () {
-        const abierto = menu.classList.contains('show');
+    if (!botonMenu || !menuPrincipal) {
+        return;
+    }
+
+    function abrirMenu() {
+        menuPrincipal.classList.add('show');
+        botonMenu.setAttribute('aria-expanded', 'true');
+    }
+
+    function cerrarMenu() {
+        menuPrincipal.classList.remove('show');
+        botonMenu.setAttribute('aria-expanded', 'false');
+    }
+
+    botonMenu.addEventListener('click', function () {
+        const abierto = menuPrincipal.classList.contains('show');
 
         if (abierto) {
-            menu.classList.remove('show');
-            boton.setAttribute('aria-expanded', 'false');
+            cerrarMenu();
         } else {
-            menu.classList.add('show');
-            boton.setAttribute('aria-expanded', 'true');
+            abrirMenu();
         }
     });
 
-    // Cerrar el menu al hacer click en un enlace (en movil)
-    menu.querySelectorAll('.nav-link').forEach(function (enlace) {
+    menuPrincipal.querySelectorAll('.nav-link').forEach(function (enlace) {
         enlace.addEventListener('click', function () {
             if (window.innerWidth < 992) {
-                menu.classList.remove('show');
-                boton.setAttribute('aria-expanded', 'false');
+                cerrarMenu();
             }
         });
+    });
+
+    document.addEventListener('keydown', function (evento) {
+        if (evento.key === 'Escape' && menuPrincipal.classList.contains('show')) {
+            cerrarMenu();
+            botonMenu.focus();
+        }
     });
 });

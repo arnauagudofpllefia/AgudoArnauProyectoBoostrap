@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
     <header id="inicio" class="bloque-morado">
         <nav class="navbar navbar-expand-lg" aria-label="Navegacion principal">
             <div class="container py-2">
@@ -18,11 +19,12 @@
                     <p class="icono-marca" aria-hidden="true"><img src="img/logo.png" alt=""></p>
                     <b class="marca-secundaria">fitness </b><b class="marca-destacada">online</b>
                 </a>
-                <button class="navbar-toggler boton-menu" type="button" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu principal">
+                <button class="navbar-toggler boton-menu" type="button" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu principal" aria-haspopup="true">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav ms-auto mt-3 mt-lg-0 gap-lg-2">
+                        <li class="nav-item"><a class="nav-link enlace-menu" href="#inicio" aria-current="page">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link enlace-menu" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link enlace-menu" href="#pasos">How To Start</a></li>
                         <li class="nav-item"><a class="nav-link enlace-menu" href="#caracteristicas">Features</a></li>
@@ -57,7 +59,7 @@
         </div>
     </section>
 
-    <main>
+    <main id="contenido-principal" tabindex="-1">
         <section id="about" class="bloque-claro py-5" aria-labelledby="titulo-about">
             <div class="container">
                 <div class="row justify-content-center g-4">
@@ -245,7 +247,7 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-12 mx-auto">
-                        <div id="carruselFeedback" class="carousel slide" data-bs-ride="carousel" aria-label="Testimonios de clientes">
+                        <div id="carruselFeedback" class="carousel" aria-label="Testimonios de clientes">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <article class="tarjeta-feedback text-center">
@@ -257,7 +259,7 @@
                                         </div>
                                     </article>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item active">
                                     <article class="tarjeta-feedback text-center">
                                         <p class="texto-feedback-demo">The most amazing fitness trainings! I’ve became true sportsman with it! Trainer is really professional. The most amazing fitness trainings! I’ve became true sportsman with it! Trainer is really professional.The most amazing fitness trainings!</p>
                                         <div class="perfil-feedback">
@@ -269,12 +271,6 @@
                                 </div>
                                 
                             </div>
-                            <button class="carousel-control-prev control-feedback" type="button" data-bs-target="#carruselFeedback" data-bs-slide="prev" aria-label="Testimonio anterior">
-                                <p class="flecha-feedback" aria-hidden="true">&#10094;</p>
-                            </button>
-                            <button class="carousel-control-next control-feedback" type="button" data-bs-target="#carruselFeedback" data-bs-slide="next" aria-label="Siguiente testimonio">
-                                <p class="flecha-feedback" aria-hidden="true">&#10095;</p>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -293,33 +289,33 @@
                         <div class="accordion" id="acordeonFaq">
                             <div class="accordion-item">
                                 <h3 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqUno" aria-expanded="true" aria-controls="faqUno">How can I start?</button>
+                                    <span class="accordion-button faq-titulo-estatico">How can I start?</span>
                                 </h3>
-                                <div id="faqUno" class="accordion-collapse collapse show" data-bs-parent="#acordeonFaq">
+                                <div id="faqUno" class="accordion-collapse show">
                                     <div class="accordion-body">Sign up in Fitness Online with your phone number. No spam guaranteed. You can skip using Fitness Online at any moment. We will immediately add you in our chat bot, where you will be able to pay chosen pricing plan. In 24 hours after payment your trainer will contact you to get acquainted and to make training program best for you.</div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqDos" aria-expanded="false" aria-controls="faqDos">How much does it cost?</button>
+                                    <span class="accordion-button faq-titulo-estatico">How much does it cost?</span>
                                 </h3>
-                                <div id="faqDos" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                                <div id="faqDos" class="accordion-collapse show">
                                     <div class="accordion-body">You can choose between Start, Middle, and Pro plans depending on your goals and preferred level of support.</div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTres" aria-expanded="false" aria-controls="faqTres">How will I train?</button>
+                                    <span class="accordion-button faq-titulo-estatico">How will I train?</span>
                                 </h3>
-                                <div id="faqTres" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                                <div id="faqTres" class="accordion-collapse show">
                                     <div class="accordion-body">Your trainer sends a personalized program with video and text instructions plus regular follow-up calls.</div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCuatro" aria-expanded="false" aria-controls="faqCuatro">Who are trainers?</button>
+                                    <span class="accordion-button faq-titulo-estatico">Who are trainers?</span>
                                 </h3>
-                                <div id="faqCuatro" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                                <div id="faqCuatro" class="accordion-collapse show">
                                     <div class="accordion-body">Our trainers are certified professionals focused on technique, progression, and healthy long-term results.</div>
                                 </div>
                             </div>
@@ -338,14 +334,16 @@
                         <form class="formulario-entrena mt-4" action="#" method="post">
                             <div class="mb-3">
                                 <label for="telefono" class="form-label etiqueta-entrena">Your Phone</label>
-                                <input type="tel" class="form-control campo-entrena" id="telefono" name="telefono" placeholder="+1_" required>
+                                <input type="tel" class="form-control campo-entrena" id="telefono" name="telefono" placeholder="+1_" required aria-required="true" aria-describedby="telefono-help" autocomplete="tel" pattern="[0-9+()\-\s]{7,}">
+                                <p id="telefono-help" class="ayuda-campo">Incluye prefijo de pais. Ejemplo: +34 600 000 000.</p>
                             </div>
                             <div class="mb-3">
                                 <label for="nombre-entrena" class="form-label etiqueta-entrena">Your Name</label>
-                                <input type="text" class="form-control campo-entrena" id="nombre-entrena" name="nombre" placeholder="Your name" required>
+                                <input type="text" class="form-control campo-entrena" id="nombre-entrena" name="nombre" placeholder="Your name" required aria-required="true" aria-describedby="nombre-help" autocomplete="name">
+                                <p id="nombre-help" class="ayuda-campo">Usa tu nombre completo para identificarte facilmente.</p>
                             </div>
                             <div class="form-check check-entrena mb-4">
-                                <input class="form-check-input" type="checkbox" value="aceptado" id="aceptar-terminos" checked>
+                                <input class="form-check-input" type="checkbox" value="aceptado" id="aceptar-terminos" name="terminos" required aria-required="true" checked>
                                 <label class="form-check-label" for="aceptar-terminos">I accept Terms of Service</label>
                             </div>
                             <div class="text-center">
@@ -367,7 +365,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 </html>

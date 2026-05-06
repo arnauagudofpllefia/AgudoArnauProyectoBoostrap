@@ -17,6 +17,23 @@ body {
     background-color: var(--fondo-claro);
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0.75rem;
+    z-index: 9999;
+    background: #ffffff;
+    color: #1a1a1a;
+    padding: 0.55rem 0.85rem;
+    border-radius: 0.4rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0.75rem;
+}
+
 .bloque-morado {
     background-color: var(--morado-principal);
     color: var(--texto-claro);
@@ -90,6 +107,7 @@ body {
 .boton-menu {
     border: 0;
     box-shadow: none;
+    display: block;
 }
 
 .navbar-toggler-icon {
@@ -274,10 +292,11 @@ body {
     font-weight: 700;
 }
 
-.precio-plan-demo span {
+.precio-plan-demo em {
     font-size: 1.35rem;
     color: rgba(255, 255, 255, 0.88);
     margin-left: 0.15rem;
+    font-style: normal;
 }
 
 .boton-plan-demo {
@@ -395,7 +414,7 @@ body {
 
 .usuario-feedback {
     font-size: 0.9rem;
-    color: #a465db;
+    color: #6f378d;
 }
 
 .control-feedback {
@@ -617,6 +636,43 @@ body {
     color: #a3a3a8;
 }
 
+.ayuda-campo {
+    font-size: 0.95rem;
+    color: #4f535b;
+    margin: 0.35rem 0 0;
+}
+
+.error-campo {
+    margin: 0.25rem 0 0;
+    min-height: 1.2rem;
+    color: #a01831;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.mensaje-formulario {
+    margin: 0 0 1rem;
+    min-height: 1.25rem;
+    text-align: center;
+    color: #2f3138;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.campo-entrena[aria-invalid="true"],
+.check-entrena .form-check-input[aria-invalid="true"] {
+    border-color: #a01831;
+    box-shadow: 0 0 0 2px rgba(160, 24, 49, 0.2);
+}
+
+.control-feedback {
+    display: none;
+}
+
+.faq-titulo-estatico::after {
+    display: none;
+}
+
 .check-entrena .form-check-input {
     width: 1.15rem;
     height: 1.15rem;
@@ -716,9 +772,24 @@ select:focus-visible,
 textarea:focus-visible,
 .accordion-button:focus-visible,
 .navbar-toggler:focus-visible {
-    outline: 3px solid #1ec7bc;
+    outline: 3px solid #0a7f78;
     outline-offset: 2px;
     box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -737,6 +808,10 @@ textarea:focus-visible,
 }
 
 @media (min-width: 992px) {
+    .boton-menu {
+        display: none;
+    }
+
     .footer-simple {
         padding: 1.35rem 0 1.2rem;
     }
@@ -991,7 +1066,7 @@ textarea:focus-visible,
         font-size: 2.95rem;
     }
 
-    #precios .precio-plan-demo span {
+    #precios .precio-plan-demo em {
         font-size: 1.55rem;
     }
 
